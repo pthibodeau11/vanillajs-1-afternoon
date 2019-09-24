@@ -1,6 +1,6 @@
 console.log("we are live");
 
-board = [];
+var board = [];
 
 
 function play(clickedId){
@@ -32,32 +32,47 @@ function play(clickedId){
 console.log(board)
 
 if (topRight !== undefined && topRight === topMid && topRight === topLeft){
-    alert(topRight + " is the winner")};
+    alert(topRight + " is the winner");
+    return;
+}
 if (midRight !== undefined && midRight === center && midRight === midLeft){
-    alert(midRight + " is the winner")};
+    alert(midRight + " is the winner");
+    return;
+}
 if (bottomRight !== undefined && bottomRight === bottomMid && bottomRight === bottomLeft){
-    alert(bottomRight + " is the winner")};
+    alert(bottomRight + " is the winner");
+    return;
+}
 if (topLeft !== undefined && topLeft === midLeft && topLeft === bottomLeft){
-    alert(topLeft + " is the winner")};
+    alert(topLeft + " is the winner");
+    return;
+}
 if (topMid !== undefined && topMid === center && topMid === bottomMid){
-    alert(topMid + " is the winner")};
+    alert(topMid + " is the winner");
+    return;
+}
 if (topRight !== undefined && topRight === midRight && topRight === bottomRight){
-    alert(topRight + " is the winner")};
+    alert(topRight + " is the winner");
+    return;
+}
 if (bottomLeft !== undefined && bottomLeft === center && bottomLeft === topRight){
-    alert(bottomLeft + " is the winner")};
+    alert(bottomLeft + " is the winner");
+    return;
+}
 if (bottomRight != undefined && bottomRight === center && bottomRight === topLeft){
-    alert(bottomRight + " is the winner")}
-
-let boardFull = true 
-for (let i = 0; i < board.length; i++){
-    
-    if(boardFull[i] = undefined){
-        boardFull = false
-    } 
-    if(boardFull = true){
-        alert("CATs game")
-    }
+    alert(bottomRight + " is the winner");
+    return;
 }
 
+let boardFull = true; 
+for (let i = 0; i <= 8; i++){
+    
+    if(boardFull[i] === undefined){
+        boardFull = false;
+    } 
+} 
+    if(boardFull === true){
+        alert("CATs game");
+    }
 }
 
